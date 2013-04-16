@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Night_Clouds_Wallpaper_kryw4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XI3-GH-YaW"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-iT-04o">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="lc5-fj-aTa"/>
+                                    <constraint firstAttribute="width" constant="410" id="shy-tF-vIX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="100"/>
+                                <color key="textColor" red="0.80392163991928101" green="0.87450987100601196" blue="0.9490196704864502" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XI3-GH-YaW" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Dr4-Yj-Fxf"/>
+                            <constraint firstItem="Qba-iT-04o" firstAttribute="top" secondItem="3" secondAttribute="top" constant="51" id="apV-WJ-uXx"/>
+                            <constraint firstItem="XI3-GH-YaW" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="iFc-2M-J4n"/>
+                            <constraint firstItem="XI3-GH-YaW" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="q1n-IQ-RdX"/>
+                            <constraint firstItem="XI3-GH-YaW" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="rLg-cH-5EU"/>
+                            <constraint firstItem="Qba-iT-04o" firstAttribute="centerX" secondItem="XI3-GH-YaW" secondAttribute="centerX" type="default" id="xDK-jR-pG5"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="clockLabel" destination="Qba-iT-04o" id="MoF-kg-Bdh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Night_Clouds_Wallpaper_kryw4.jpg" width="1024" height="768"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="clockLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
