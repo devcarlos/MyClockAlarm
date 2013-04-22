@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RRSGlowLabel.h"
 
 @interface ViewController : UIViewController{
-    UILabel *_clockLabel;
+    RRSGlowLabel *_clockLabel;
     NSTimer *clockTimer;
 }
 
-@property (strong, nonatomic) IBOutlet UILabel *clockLabel;
+@property (strong, nonatomic) IBOutlet RRSGlowLabel *clockLabel;
 
+- (IBAction)showSettings:(id)sender;
 
+- (IBAction)showAlarms:(id)sender;
 @end
