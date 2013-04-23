@@ -29,7 +29,6 @@
 		C91EA1B9172617BB0088AE5C /* Alarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C91EA1B7172617BB0088AE5C /* Alarms.xcdatamodeld */; };
 		C91EA1BC1726186B0088AE5C /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EA1BB1726186B0088AE5C /* Alarms.m */; };
 		C91EA1BF1726197C0088AE5C /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EA1BE1726197C0088AE5C /* CoreDataHelper.m */; };
-		C945B0A41725B02C001C90D0 /* AlarmIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C945B0A01725B02C001C90D0 /* AlarmIcon.png */; };
 		C945B0A71725B9D6001C90D0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C945B0A61725B9D6001C90D0 /* SettingsViewController.m */; };
 		C945B0AA1725BD16001C90D0 /* AlarmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C945B0A91725BD16001C90D0 /* AlarmsViewController.m */; };
 		C945B0AC1725BE77001C90D0 /* 7LED.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C945B0AB1725BE69001C90D0 /* 7LED.TTF */; };
@@ -67,7 +66,6 @@
 		C91EA1BB1726186B0088AE5C /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
 		C91EA1BD1726197B0088AE5C /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		C91EA1BE1726197C0088AE5C /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
-		C945B0A01725B02C001C90D0 /* AlarmIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlarmIcon.png; sourceTree = "<group>"; };
 		C945B0A51725B9D6001C90D0 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		C945B0A61725B9D6001C90D0 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C945B0A81725BD16001C90D0 /* AlarmsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmsViewController.h; sourceTree = "<group>"; };
@@ -155,10 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				C91EA1B01725FC4D0088AE5C /* CalendarIcon@2x.png */,
+				C91EA1AD1725FB5E0088AE5C /* CalendarIcon.png */,
 				C91EA1B11725FC4D0088AE5C /* SettingsIcon@2x.png */,
 				C91EA1AC1725FB5E0088AE5C /* SettingsIcon.png */,
-				C91EA1AD1725FB5E0088AE5C /* CalendarIcon.png */,
-				C945B0A01725B02C001C90D0 /* AlarmIcon.png */,
 				C90C852E171DD0790072ABCE /* Night_Clouds_Wallpaper_kryw4.jpg */,
 			);
 			name = images;
@@ -262,7 +259,6 @@
 				C90C8522171DCDF00072ABCE /* MainStoryboard_iPhone.storyboard in Resources */,
 				C90C8525171DCDF00072ABCE /* MainStoryboard_iPad.storyboard in Resources */,
 				C90C852F171DD0790072ABCE /* Night_Clouds_Wallpaper_kryw4.jpg in Resources */,
-				C945B0A41725B02C001C90D0 /* AlarmIcon.png in Resources */,
 				C91EA1AE1725FB5E0088AE5C /* SettingsIcon.png in Resources */,
 				C91EA1AF1725FB5E0088AE5C /* CalendarIcon.png in Resources */,
 				C91EA1B21725FC4D0088AE5C /* CalendarIcon@2x.png in Resources */,
