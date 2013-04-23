@@ -24,7 +24,7 @@
 
 //methods to perform database operations
 -(void) insertAlarm :(NSString *)time Repeat:(NSString *)repeat;
--(void) selectAllAlarms;
+-(NSMutableArray *) selectAllAlarms;
 -(NSManagedObject *) searchAlarmByTime :(NSString *) time;
 -(void) deleteAlarmByTime:(NSString *) time;
 

@@ -106,21 +106,34 @@ static CoreDataHelper *coreDataHelper;
 #pragma mark - COREDATA -SELECT / VIEW ALL DATA
 
 
--(void) selectAllAlarms{
+-(NSMutableArray *) selectAllAlarms{
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Alarms" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     
     NSError *error = nil;
     NSArray *objects = [context executeFetchRequest:fetchRequest error:&error];
+    NSMutableArray *alarms = nil;
+    
     if ([objects count]>0) {
+        alarms = [[NSMutableArray alloc] init];
+
         for (NSManagedObject *aAlarm in objects) {
             NSLog(@"time=%@, repeat=%@",[aAlarm valueForKey:@"time"],[aAlarm valueForKey:@"repeat"]);
+            
+            NSMutableDictionary *alarmDict = [NSMutableDictionary dictionary];
+            [alarmDict setObject: [aAlarm valueForKey:@"time"] forKey: @"time"];
+            [alarmDict setObject: [aAlarm valueForKey:@"repeat"] forKey: @"repeat"];
+            
+            [alarms addObject:alarmDict];
         }
+        
     }
     else{
         NSLog(@"no matches found");
     }
+    
+    return alarms;
 }
 
 

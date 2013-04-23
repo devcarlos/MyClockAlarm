@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class Alarms;
+
 @interface AlarmsViewController : UITableViewController {
     NSMutableArray *_alarms;
 }
 
 @property (nonatomic, strong) NSMutableArray *alarms;
+@property (nonatomic, strong) Alarms  *aAlarm;
 
 - (IBAction)back:(id)sender;
 

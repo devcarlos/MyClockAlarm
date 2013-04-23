@@ -7,6 +7,8 @@
 //
 
 #import "AlarmsViewController.h"
+#import "CoreDataHelper.h"
+#import "Alarms.h"
 
 @interface AlarmsViewController ()
 
@@ -15,6 +17,7 @@
 @implementation AlarmsViewController
 
 @synthesize alarms = _alarms;
+@synthesize aAlarm;
 
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -33,8 +36,7 @@
 {
     [super viewDidLoad];
     
-    self.alarms = [[NSMutableArray alloc] init];
-    
+    /*
     NSMutableDictionary *hourDict = [NSMutableDictionary dictionary];
     
     [hourDict setObject: @"8:30" forKey: @"time"];
@@ -43,7 +45,21 @@
     [self.alarms addObject:hourDict];
     [self.alarms addObject:hourDict];
     [self.alarms addObject:hourDict];
-
+     */
+    
+    self.alarms = [[CoreDataHelper initCoreDataHelper] selectAllAlarms];
+    
+    if (self.alarms == nil) {
+        
+    
+        [[CoreDataHelper initCoreDataHelper] insertAlarm:@"8:30" Repeat:@"Weekdays"];
+        [[CoreDataHelper initCoreDataHelper] insertAlarm:@"8:30" Repeat:@"Weekdays"];
+        [[CoreDataHelper initCoreDataHelper] insertAlarm:@"8:30" Repeat:@"Weekdays"];
+        [[CoreDataHelper initCoreDataHelper] insertAlarm:@"8:30" Repeat:@"Weekdays"];
+        self.alarms = [[CoreDataHelper initCoreDataHelper] selectAllAlarms];
+    
+    }
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -78,7 +94,7 @@
     // Configure the cell...
     
     [[cell textLabel] setText:[[self.alarms objectAtIndex:indexPath.item] objectForKey:@"time"]];
-    [[cell detailTextLabel] setText:[[self.alarms objectAtIndex:[indexPath row]] objectForKey:@"date"]];
+    [[cell detailTextLabel] setText:[[self.alarms objectAtIndex:[indexPath row]] objectForKey:@"repeat"]];
     
     return cell;
 }
