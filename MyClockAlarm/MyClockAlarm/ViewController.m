@@ -20,6 +20,12 @@
 @synthesize dayOfWeekLabel = _dayOfWeekLabel;
 @synthesize ampmLabel = _ampmLabel;
 
+@synthesize alarmSound = _alarmSound;
+@synthesize alarmVibrate = _alarmVibrate;
+@synthesize showDate = _showDate;
+@synthesize showWeekDay = _showWeekDay;
+@synthesize show24hours = _show24hours;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,6 +53,13 @@
     }
     */
     
+    //activate settings
+    self.alarmVibrate = YES;
+    self.alarmSound = YES;
+    self.show24hours = YES;
+    self.showDate = YES;
+    self.showWeekDay = YES;
+    
     [self performSelector:@selector(clockTime)];
     
     clockTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f
@@ -56,6 +69,17 @@
                                                    repeats:YES];
     
 }
+- (void)settingsViewController:(SettingsViewController *)controller didFinishWithAlarmVibrate:(BOOL)av AlarmSound:(BOOL)as ShowDate:(BOOL)sd ShowWeekDay:(BOOL)swd Show24Hours:(BOOL)s24hours
+{
+    self.alarmVibrate = av;
+    self.alarmSound = as;
+    self.show24hours = s24hours;
+    self.showDate = sd;
+    self.showWeekDay = swd;
+    
+    [self.view setNeedsDisplay];    
+}
+
 - (void)clockTime
 {
     NSDate *today = [[NSDate alloc] init];
@@ -91,7 +115,7 @@
         gradientLayer.frame = CGRectMake(0.0, 0.0, 768.0, 1004.0);
         
     }else{
-        [self.clockLabel setFont:[UIFont fontWithName:@"DS-Digital" size:75.0]];
+        [self.clockLabel setFont:[UIFont fontWithName:@"DS-Digital" size:85.0]];
         [self.dateLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
         [self.dayOfWeekLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
         [self.ampmLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
@@ -124,6 +148,27 @@
     if (![self.ampmLabel.text isEqualToString:currentPeriod]) {
         self.ampmLabel.text = currentPeriod;
     }
+    
+    if (self.showDate == NO) {
+        self.dateLabel.hidden = YES;
+    } else {
+        self.dateLabel.hidden = NO;
+    }
+    
+    
+    if (self.showWeekDay == NO) {
+        self.dayOfWeekLabel.hidden = YES;
+    } else {
+        self.dayOfWeekLabel.hidden = NO;
+    }
+    
+    if (self.show24hours == NO) {
+        self.clockLabel.hidden = YES;
+        self.ampmLabel.hidden = YES;
+    } else {
+        self.clockLabel.hidden = NO;
+        self.ampmLabel.hidden = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -136,7 +181,10 @@
 - (IBAction)showSettings:(id)sender {
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
-    UIViewController *controller = [mainStoryboard instantiateViewControllerWithIdentifier: @"settings"];
+    SettingsViewController *controller = [mainStoryboard instantiateViewControllerWithIdentifier: @"settings"];
+    //SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+    controller.delegate = self;
+    //[[self navigationController] pushViewController:controller animated:YES];
     [self presentViewController:controller animated:YES completion:nil];
 
 }

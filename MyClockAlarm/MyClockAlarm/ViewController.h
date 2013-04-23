@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "RRSGlowLabel.h"
+#import "SettingsViewController.h"
 
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController <SettingsViewControllerDelegate>{
     RRSGlowLabel *_clockLabel;
     UILabel *_dateLabel;
     UILabel *_dayOfWeekLabel;
@@ -21,6 +22,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dayOfWeekLabel;
 @property (strong, nonatomic) IBOutlet UILabel *ampmLabel;
+
+@property(nonatomic) BOOL alarmVibrate;
+@property(nonatomic) BOOL alarmSound;
+@property(nonatomic) BOOL showDate;
+@property(nonatomic) BOOL showWeekDay;
+@property(nonatomic) BOOL show24hours;
+
 
 
 - (IBAction)showSettings:(id)sender;

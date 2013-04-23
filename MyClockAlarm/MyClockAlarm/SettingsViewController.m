@@ -16,6 +16,14 @@
 
 
 - (IBAction)back:(id)sender {
+    
+    BOOL alarmVibrate = self.alarmVibrate.on;
+    BOOL alarmSound = self.alarmSound.on;
+    BOOL showDate = self.showDate.on;
+    BOOL showWeekDay = self.showWeekDay.on;
+    BOOL show24hours = self.show24hours.on;
+    
+    [self.delegate settingsViewController:self didFinishWithAlarmVibrate:alarmVibrate AlarmSound:alarmSound ShowDate:showDate ShowWeekDay:showWeekDay Show24Hours:show24hours];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -52,14 +60,13 @@
     // Return the number of sections.
     return 3;
 }
-
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
     return 2;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
