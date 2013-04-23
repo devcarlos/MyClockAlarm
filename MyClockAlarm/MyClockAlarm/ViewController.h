@@ -11,10 +11,17 @@
 
 @interface ViewController : UIViewController{
     RRSGlowLabel *_clockLabel;
+    UILabel *_dateLabel;
+    UILabel *_dayOfWeekLabel;
+    UILabel *_ampmLabel;
     NSTimer *clockTimer;
 }
 
 @property (strong, nonatomic) IBOutlet RRSGlowLabel *clockLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dayOfWeekLabel;
+@property (strong, nonatomic) IBOutlet UILabel *ampmLabel;
+
 
 - (IBAction)showSettings:(id)sender;
 

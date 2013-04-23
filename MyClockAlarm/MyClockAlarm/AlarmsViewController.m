@@ -14,6 +14,7 @@
 
 @implementation AlarmsViewController
 
+@synthesize alarms = _alarms;
 
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -31,6 +32,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.alarms = [[NSMutableArray alloc] init];
+    
+    NSMutableDictionary *hourDict = [NSMutableDictionary dictionary];
+    
+    [hourDict setObject: @"8:30" forKey: @"time"];
+    [hourDict setObject: @"Weekdays" forKey: @"date"];
+    
+    [self.alarms addObject:hourDict];
+    [self.alarms addObject:hourDict];
+    [self.alarms addObject:hourDict];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,7 +68,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return [self.alarms count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -64,6 +76,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    
+    [[cell textLabel] setText:[[self.alarms objectAtIndex:indexPath.item] objectForKey:@"time"]];
+    [[cell detailTextLabel] setText:[[self.alarms objectAtIndex:[indexPath row]] objectForKey:@"date"]];
     
     return cell;
 }

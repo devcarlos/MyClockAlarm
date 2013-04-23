@@ -14,19 +14,18 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-iT-04o" customClass="RRSGlowLabel">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="153" id="lc5-fj-aTa"/>
+                                    <constraint firstAttribute="height" constant="136" id="xPa-Ar-7CP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="65"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="75"/>
                                 <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frl-JJ-nDw">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Ou7-bA-auH"/>
                                     <constraint firstAttribute="width" constant="32" id="UO3-8P-wDj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button" image="AlarmIcon.png">
+                                <state key="normal" title="Button" image="CalendarIcon.png">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
@@ -53,21 +52,52 @@
                                     <action selector="showSettings:" destination="2" eventType="touchUpInside" id="yQy-Bf-lB2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="November 22 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UM-QY-l5I">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="I0E-yR-Rz1"/>
+                                    <constraint firstAttribute="height" constant="15" id="cFI-ng-azs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thursday" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQt-ow-waQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="U9X-6N-Wqx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jp-bP-m9Q">
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.047058828175067902" green="0.027450982481241226" blue="0.11372549831867218" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="Qba-iT-04o" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4KW-cC-DlS"/>
-                            <constraint firstItem="LCv-ms-WKl" firstAttribute="bottom" secondItem="frl-JJ-nDw" secondAttribute="bottom" type="default" id="5wd-p5-882"/>
-                            <constraint firstItem="Qba-iT-04o" firstAttribute="top" secondItem="3" secondAttribute="top" constant="206" id="GqE-mj-wwO"/>
+                            <constraint firstItem="GQt-ow-waQ" firstAttribute="leading" secondItem="5UM-QY-l5I" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="5fF-qq-6Gu"/>
+                            <constraint firstItem="GQt-ow-waQ" firstAttribute="top" secondItem="5UM-QY-l5I" secondAttribute="top" type="default" id="6cv-4A-5ax"/>
                             <constraint firstAttribute="trailing" secondItem="LCv-ms-WKl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="K2q-vz-6Iq"/>
-                            <constraint firstAttribute="trailing" secondItem="Qba-iT-04o" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YqI-XK-rJB"/>
+                            <constraint firstAttribute="trailing" secondItem="0jp-bP-m9Q" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LKQ-91-T1I"/>
+                            <constraint firstItem="Qba-iT-04o" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Q9e-n9-pka"/>
+                            <constraint firstItem="5UM-QY-l5I" firstAttribute="top" secondItem="3" secondAttribute="top" constant="273" id="bdn-Ex-EY5"/>
+                            <constraint firstItem="Qba-iT-04o" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="eEO-Lw-kxW"/>
+                            <constraint firstItem="Qba-iT-04o" firstAttribute="top" secondItem="3" secondAttribute="top" constant="170" type="user" id="g2X-1p-99U"/>
                             <constraint firstItem="frl-JJ-nDw" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hAq-cR-Hcg"/>
                             <constraint firstItem="frl-JJ-nDw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mFj-xk-TFE"/>
                             <constraint firstItem="LCv-ms-WKl" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="oJV-G6-KMO"/>
+                            <constraint firstItem="5UM-QY-l5I" firstAttribute="baseline" secondItem="GQt-ow-waQ" secondAttribute="baseline" type="default" id="tyT-dC-zgF"/>
+                            <constraint firstItem="0jp-bP-m9Q" firstAttribute="top" secondItem="3" secondAttribute="top" constant="190" id="uHC-RY-Okk"/>
+                            <constraint firstAttribute="trailing" secondItem="GQt-ow-waQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vZi-el-NNq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ampmLabel" destination="0jp-bP-m9Q" id="Nyi-k8-d9l"/>
                         <outlet property="clockLabel" destination="Qba-iT-04o" id="kcg-u3-961"/>
+                        <outlet property="dateLabel" destination="5UM-QY-l5I" id="tbt-fC-s0P"/>
+                        <outlet property="dayOfWeekLabel" destination="GQt-ow-waQ" id="clg-yF-Yqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -104,12 +134,12 @@
                                     <rect key="frame" x="10" y="1" width="267" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-0f-jSm">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="8:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-0f-jSm">
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpi-Sn-coX">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Weekdays" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpi-Sn-coX">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -287,8 +317,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AlarmIcon.png" width="36" height="36"/>
-        <image name="SettingsIcon.png" width="33" height="36"/>
+        <image name="CalendarIcon.png" width="32" height="32"/>
+        <image name="SettingsIcon.png" width="32" height="32"/>
     </resources>
     <classes>
         <class className="AlarmsViewController" superclassName="UITableViewController">
@@ -314,7 +344,10 @@
             <relationships>
                 <relationship kind="action" name="showAlarms:"/>
                 <relationship kind="action" name="showSettings:"/>
+                <relationship kind="outlet" name="ampmLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="clockLabel" candidateClass="RRSGlowLabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dayOfWeekLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

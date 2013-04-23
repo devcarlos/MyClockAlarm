@@ -16,6 +16,9 @@
 @implementation ViewController
 
 @synthesize clockLabel = _clockLabel;
+@synthesize dateLabel = _dateLabel;
+@synthesize dayOfWeekLabel = _dayOfWeekLabel;
+@synthesize ampmLabel = _ampmLabel;
 
 - (void)viewDidLoad
 {
@@ -60,16 +63,16 @@
     [dateFormatter setDateFormat:@"HH:mm:ss"];
     
     NSString *currentTime = [dateFormatter stringFromDate: today];
+
+    [dateFormatter setDateFormat:@"MMMM dd YYYY"];
+    NSString *currentDate = [dateFormatter stringFromDate: today];
+
+    [dateFormatter setDateFormat:@"EEEE"];
+    NSString *currentDayOfWeek = [dateFormatter stringFromDate: today];
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        //
-        [self.clockLabel setFont:[UIFont fontWithName:@"DS-Digital" size:150.0]];
-        
-    }else{
-        [self.clockLabel setFont:[UIFont fontWithName:@"DS-Digital" size:65.0]];
-        
-    }
+    [dateFormatter setDateFormat:@"a"];
+    NSString *currentPeriod = [dateFormatter stringFromDate: today];
+    
     
     //Create a couple of colours for the background gradient
     UIColor *colorOne = [UIColor colorWithRed:0.0 green:0.125 blue:0.18 alpha:1.0];
@@ -77,17 +80,50 @@
     
     //Create the gradient and add it to our view's root layer
     CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
-    gradientLayer.frame = CGRectMake(0.0, 0.0, 320.0, 480.0);
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        //
+        [self.clockLabel setFont:[UIFont fontWithName:@"DS-Digital" size:180.0]];
+        [self.dateLabel setFont:[UIFont fontWithName:@"DS-Digital" size:24.0]];
+        [self.dayOfWeekLabel setFont:[UIFont fontWithName:@"DS-Digital" size:24.0]];
+        [self.ampmLabel setFont:[UIFont fontWithName:@"DS-Digital" size:24.0]];
+        gradientLayer.frame = CGRectMake(0.0, 0.0, 768.0, 1004.0);
+        
+    }else{
+        [self.clockLabel setFont:[UIFont fontWithName:@"DS-Digital" size:75.0]];
+        [self.dateLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
+        [self.dayOfWeekLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
+        [self.ampmLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
+        gradientLayer.frame = CGRectMake(0.0, 0.0, 320.0, 480.0);
+        
+    }
+
     [gradientLayer setColors:[NSArray arrayWithObjects:(id)colorOne.CGColor, (id)colorTwo.CGColor, nil]];
     [self.view.layer insertSublayer:gradientLayer atIndex:0];
+
     
     //Set the label properties and glow params
     self.clockLabel.textColor = [UIColor colorWithRed:0.20 green:0.70 blue:1.0 alpha:1.0];
     self.clockLabel.glowColor = self.clockLabel.textColor;
     self.clockLabel.glowOffset = CGSizeMake(0.0, 0.0);
-    self.clockLabel.glowAmount = 10.0;
+    self.clockLabel.glowAmount = 35.0;
     self.clockLabel.text = currentTime;
     
+    //check to change only if the text has changed
+    if (![self.dateLabel.text isEqualToString:currentDate]) {
+        self.dateLabel.text = currentDate;
+    }
+
+    //check to change only if the text has changed
+    if (![self.dayOfWeekLabel.text isEqualToString:currentDayOfWeek]) {
+        self.dayOfWeekLabel.text = currentDayOfWeek;
+    }
+    
+    //check to change only if the text has changed
+    if (![self.ampmLabel.text isEqualToString:currentPeriod]) {
+        self.ampmLabel.text = currentPeriod;
+    }
 }
 
 - (void)didReceiveMemoryWarning
