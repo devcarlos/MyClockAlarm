@@ -12,6 +12,7 @@
 
 @interface ViewController : UIViewController <SettingsViewControllerDelegate>{
     RRSGlowLabel *_clockLabel;
+    RRSGlowLabel *_clockLabelBack;
     UILabel *_dateLabel;
     UILabel *_dayOfWeekLabel;
     UILabel *_ampmLabel;
@@ -22,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dayOfWeekLabel;
 @property (strong, nonatomic) IBOutlet UILabel *ampmLabel;
+@property (strong, nonatomic) IBOutlet RRSGlowLabel *clockLabelBack;
 
 @property(nonatomic) BOOL alarmVibrate;
 @property(nonatomic) BOOL alarmSound;

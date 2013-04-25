@@ -9,13 +9,16 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController ()
+@interface ViewController (){
+    BOOL isShowingLandscapeView;
+}
 
 @end
 
 @implementation ViewController
 
 @synthesize clockLabel = _clockLabel;
+@synthesize clockLabelBack = _clockLabelBack;
 @synthesize dateLabel = _dateLabel;
 @synthesize dayOfWeekLabel = _dayOfWeekLabel;
 @synthesize ampmLabel = _ampmLabel;
@@ -26,11 +29,68 @@
 @synthesize showWeekDay = _showWeekDay;
 @synthesize show24hours = _show24hours;
 
+- (void)awakeFromNib
+{
+    isShowingLandscapeView = NO;
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(orientationChanged:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+}
+
+- (void)orientationChanged:(NSNotification *)notification
+{
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    if (UIDeviceOrientationIsLandscape(deviceOrientation))
+    {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+        UIViewController *controller = [mainStoryboard instantiateViewControllerWithIdentifier: @"Landscape"];
+        [self presentViewController:controller animated:YES completion:nil];
+        isShowingLandscapeView = YES;
+        NSLog(@"Landscape");
+    }
+    else if (UIDeviceOrientationIsPortrait(deviceOrientation))
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        isShowingLandscapeView = NO;
+        NSLog(@"Portrait");
+    }
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+
+/*
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    
+    if(((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) ||
+        (interfaceOrientation == UIInterfaceOrientationLandscapeRight))){
+        
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+        UIViewController *controller = [mainStoryboard instantiateViewControllerWithIdentifier: @"Landscape"];
+        [self presentViewController:controller animated:YES completion:nil];
+        isShowingLandscapeView = YES;
+        NSLog(@"Landscape");
+        
+    }
+    else if(((interfaceOrientation == UIInterfaceOrientationPortrait) ||
+             (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown))){
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        isShowingLandscapeView = NO;
+        NSLog(@"Portrait");
+    }
+    
+    return YES;
+}
+ */
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
     /*
     // array
     NSMutableArray *fontNames = [[NSMutableArray alloc] init];
@@ -67,7 +127,7 @@
                                                   selector:@selector(clockTime)
                                                   userInfo:nil
                                                    repeats:YES];
-    
+
 }
 - (void)settingsViewController:(SettingsViewController *)controller didFinishWithAlarmVibrate:(BOOL)av AlarmSound:(BOOL)as ShowDate:(BOOL)sd ShowWeekDay:(BOOL)swd Show24Hours:(BOOL)s24hours
 {
@@ -115,10 +175,11 @@
         gradientLayer.frame = CGRectMake(0.0, 0.0, 768.0, 1004.0);
         
     }else{
-        [self.clockLabel setFont:[UIFont fontWithName:@"DS-Digital" size:85.0]];
-        [self.dateLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
-        [self.dayOfWeekLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
-        [self.ampmLabel setFont:[UIFont fontWithName:@"DS-Digital" size:16.0]];
+        [self.clockLabel setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:31.0]];
+        [self.clockLabelBack setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:31.0]];
+        [self.dateLabel setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:7.0]];
+        [self.dayOfWeekLabel setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:7.0]];
+        [self.ampmLabel setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:7.0]];
         gradientLayer.frame = CGRectMake(0.0, 0.0, 320.0, 480.0);
         
     }
@@ -133,6 +194,14 @@
     self.clockLabel.glowOffset = CGSizeMake(0.0, 0.0);
     self.clockLabel.glowAmount = 35.0;
     self.clockLabel.text = currentTime;
+    
+    //Set the label properties and glow params
+    self.clockLabelBack.textColor = [UIColor colorWithRed:0.20 green:0.70 blue:1.0 alpha:1.0];
+    self.clockLabelBack.glowColor = self.clockLabel.textColor;
+    self.clockLabelBack.glowOffset = CGSizeMake(0.0, 0.0);
+    self.clockLabelBack.glowAmount = 35.0;
+    self.clockLabelBack.text = @"00:00:00";
+    self.clockLabelBack.alpha = 0.5f;
     
     //check to change only if the text has changed
     if (![self.dateLabel.text isEqualToString:currentDate]) {
@@ -150,24 +219,40 @@
     }
     
     if (self.showDate == NO) {
-        self.dateLabel.hidden = YES;
+        //self.dateLabel.hidden = YES;
+        self.dateLabel.alpha = 0.5f;
     } else {
         self.dateLabel.hidden = NO;
+        self.dateLabel.alpha = 1.0f;
     }
     
     
     if (self.showWeekDay == NO) {
-        self.dayOfWeekLabel.hidden = YES;
+        //self.dayOfWeekLabel.hidden = YES;
+        self.dayOfWeekLabel.alpha = 0.5f;
     } else {
-        self.dayOfWeekLabel.hidden = NO;
+        //self.dayOfWeekLabel.hidden = NO;
+        self.dayOfWeekLabel.alpha = 1.0f;
     }
     
     if (self.show24hours == NO) {
-        self.clockLabel.hidden = YES;
-        self.ampmLabel.hidden = YES;
+        [dateFormatter setDateFormat:@"hh:mm:ss"];
+        currentTime = [dateFormatter stringFromDate: today];
+        self.clockLabel.text = currentTime;
+        
+        //self.clockLabel.hidden = YES;
+        //self.ampmLabel.hidden = YES;
+        self.ampmLabel.alpha = 0.5f;
+        
     } else {
-        self.clockLabel.hidden = NO;
-        self.ampmLabel.hidden = NO;
+        [dateFormatter setDateFormat:@"HH:mm:ss"];
+        currentTime = [dateFormatter stringFromDate: today];
+        self.clockLabel.text = currentTime;
+
+        //self.clockLabel.hidden = NO;
+        //self.ampmLabel.hidden = NO;
+        self.ampmLabel.alpha = 1.0f;
+
     }
 }
 

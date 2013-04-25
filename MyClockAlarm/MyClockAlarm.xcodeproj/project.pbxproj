@@ -31,9 +31,10 @@
 		C91EA1BF1726197C0088AE5C /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EA1BE1726197C0088AE5C /* CoreDataHelper.m */; };
 		C945B0A71725B9D6001C90D0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C945B0A61725B9D6001C90D0 /* SettingsViewController.m */; };
 		C945B0AA1725BD16001C90D0 /* AlarmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C945B0A91725BD16001C90D0 /* AlarmsViewController.m */; };
-		C945B0AC1725BE77001C90D0 /* 7LED.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C945B0AB1725BE69001C90D0 /* 7LED.TTF */; };
 		C945B0B11725C57A001C90D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945B0B01725C57A001C90D0 /* QuartzCore.framework */; };
 		C945B0B41725CA55001C90D0 /* RRSGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C945B0B31725CA55001C90D0 /* RRSGlowLabel.m */; };
+		C9595B44172965DC003B4DD9 /* Let's go Digital Regular.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C9595B42172965B2003B4DD9 /* Let's go Digital Regular.TTF */; };
+		C9595B45172965DC003B4DD9 /* advanced_pixel_lcd-7.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C9595B43172965B2003B4DD9 /* advanced_pixel_lcd-7.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,10 +71,12 @@
 		C945B0A61725B9D6001C90D0 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C945B0A81725BD16001C90D0 /* AlarmsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmsViewController.h; sourceTree = "<group>"; };
 		C945B0A91725BD16001C90D0 /* AlarmsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmsViewController.m; sourceTree = "<group>"; };
-		C945B0AB1725BE69001C90D0 /* 7LED.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7LED.TTF; sourceTree = "<group>"; };
 		C945B0B01725C57A001C90D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C945B0B21725CA55001C90D0 /* RRSGlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRSGlowLabel.h; sourceTree = "<group>"; };
 		C945B0B31725CA55001C90D0 /* RRSGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRSGlowLabel.m; sourceTree = "<group>"; };
+		C9595B42172965B2003B4DD9 /* Let's go Digital Regular.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Let's go Digital Regular.TTF"; sourceTree = "<group>"; };
+		C9595B43172965B2003B4DD9 /* advanced_pixel_lcd-7.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "advanced_pixel_lcd-7.TTF"; sourceTree = "<group>"; };
+		C9595B4617296B0C003B4DD9 /* 7LED.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7LED.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +167,9 @@
 		C90C8532171DD4910072ABCE /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C945B0AB1725BE69001C90D0 /* 7LED.TTF */,
+				C9595B42172965B2003B4DD9 /* Let's go Digital Regular.TTF */,
+				C9595B43172965B2003B4DD9 /* advanced_pixel_lcd-7.TTF */,
+				C9595B4617296B0C003B4DD9 /* 7LED.TTF */,
 				C90C8531171DD4890072ABCE /* DS-DIGIB.TTF */,
 			);
 			name = fonts;
@@ -250,7 +255,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C945B0AC1725BE77001C90D0 /* 7LED.TTF in Resources */,
+				C9595B44172965DC003B4DD9 /* Let's go Digital Regular.TTF in Resources */,
+				C9595B45172965DC003B4DD9 /* advanced_pixel_lcd-7.TTF in Resources */,
 				C90C8533171DDB8E0072ABCE /* DS-DIGIB.TTF in Resources */,
 				C90C8513171DCDF00072ABCE /* InfoPlist.strings in Resources */,
 				C90C851B171DCDF00072ABCE /* Default.png in Resources */,

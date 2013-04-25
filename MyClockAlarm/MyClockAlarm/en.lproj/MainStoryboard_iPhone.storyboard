@@ -7,16 +7,21 @@
         <!--View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Portrait" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-iT-04o" customClass="RRSGlowLabel">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bj-Jk-Oh2" userLabel="Glow Label Back" customClass="RRSGlowLabel">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="xPa-Ar-7CP"/>
+                                    <constraint firstAttribute="height" constant="140" id="o51-oe-G21"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="75"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="70"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-iT-04o" userLabel="Glow Label Front" customClass="RRSGlowLabel">
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="70"/>
                                 <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,8 +59,7 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="November 22 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UM-QY-l5I">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="174" id="I0E-yR-Rz1"/>
-                                    <constraint firstAttribute="height" constant="15" id="cFI-ng-azs"/>
+                                    <constraint firstAttribute="height" constant="29" id="1uC-Gh-ysY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,7 +67,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thursday" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQt-ow-waQ">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="U9X-6N-Wqx"/>
+                                    <constraint firstAttribute="height" constant="25" id="cXL-zh-Xo6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,25 +81,30 @@
                         </subviews>
                         <color key="backgroundColor" red="0.047058828175067902" green="0.027450982481241226" blue="0.11372549831867218" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="GQt-ow-waQ" firstAttribute="top" secondItem="5UM-QY-l5I" secondAttribute="top" type="default" id="6cv-4A-5ax"/>
-                            <constraint firstAttribute="trailing" secondItem="LCv-ms-WKl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="K2q-vz-6Iq"/>
-                            <constraint firstItem="Qba-iT-04o" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Q9e-n9-pka"/>
-                            <constraint firstItem="5UM-QY-l5I" firstAttribute="top" secondItem="3" secondAttribute="top" constant="273" id="bdn-Ex-EY5"/>
-                            <constraint firstItem="Qba-iT-04o" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="eEO-Lw-kxW"/>
-                            <constraint firstItem="Qba-iT-04o" firstAttribute="top" secondItem="3" secondAttribute="top" constant="170" type="user" id="g2X-1p-99U"/>
-                            <constraint firstItem="frl-JJ-nDw" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hAq-cR-Hcg"/>
-                            <constraint firstItem="frl-JJ-nDw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mFj-xk-TFE"/>
-                            <constraint firstAttribute="trailing" secondItem="0jp-bP-m9Q" secondAttribute="trailing" constant="22" id="nEK-ZJ-mrB"/>
-                            <constraint firstItem="LCv-ms-WKl" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="oJV-G6-KMO"/>
-                            <constraint firstItem="GQt-ow-waQ" firstAttribute="trailing" secondItem="0jp-bP-m9Q" secondAttribute="trailing" type="default" id="qPv-5O-KrV"/>
-                            <constraint firstItem="5UM-QY-l5I" firstAttribute="baseline" secondItem="GQt-ow-waQ" secondAttribute="baseline" type="default" id="tyT-dC-zgF"/>
-                            <constraint firstItem="0jp-bP-m9Q" firstAttribute="top" secondItem="3" secondAttribute="top" constant="190" id="uHC-RY-Okk"/>
-                            <constraint firstItem="5UM-QY-l5I" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="30" id="zCc-6E-ol8"/>
+                            <constraint firstItem="Qba-iT-04o" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="0bV-Wv-pne"/>
+                            <constraint firstItem="LCv-ms-WKl" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" type="user" id="65h-ve-Sh8"/>
+                            <constraint firstItem="0jp-bP-m9Q" firstAttribute="top" secondItem="Qba-iT-04o" secondAttribute="top" type="default" id="8Qu-x9-ysb"/>
+                            <constraint firstItem="Qba-iT-04o" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Ham-es-KVM"/>
+                            <constraint firstAttribute="trailing" secondItem="0jp-bP-m9Q" secondAttribute="trailing" constant="22" type="user" id="IAe-g2-MZh"/>
+                            <constraint firstAttribute="trailing" secondItem="LCv-ms-WKl" secondAttribute="trailing" constant="20" type="user" id="K2q-vz-6Iq"/>
+                            <constraint firstItem="9bj-Jk-Oh2" firstAttribute="baseline" secondItem="Qba-iT-04o" secondAttribute="baseline" type="default" id="K9A-cB-5kh"/>
+                            <constraint firstItem="frl-JJ-nDw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" type="user" id="Qfl-Ds-qOH"/>
+                            <constraint firstItem="5UM-QY-l5I" firstAttribute="left" secondItem="3" secondAttribute="left" constant="20" type="user" id="Zca-h7-RZU"/>
+                            <constraint firstAttribute="trailing" secondItem="GQt-ow-waQ" secondAttribute="trailing" constant="22" type="user" id="a9P-gg-HUW"/>
+                            <constraint firstItem="frl-JJ-nDw" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" type="user" id="hAq-cR-Hcg"/>
+                            <constraint firstItem="9bj-Jk-Oh2" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="j3J-iT-gre"/>
+                            <constraint firstItem="GQt-ow-waQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="268" id="oog-fS-oz0"/>
+                            <constraint firstItem="0jp-bP-m9Q" firstAttribute="top" secondItem="9bj-Jk-Oh2" secondAttribute="top" type="default" id="qcr-jD-Cc0"/>
+                            <constraint firstItem="9bj-Jk-Oh2" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="tUJ-zf-73K"/>
+                            <constraint firstItem="5UM-QY-l5I" firstAttribute="baseline" secondItem="0jp-bP-m9Q" secondAttribute="baseline" type="default" id="unK-YP-PZN"/>
+                            <constraint firstItem="5UM-QY-l5I" firstAttribute="top" secondItem="3" secondAttribute="top" constant="181" id="wi9-SO-Dpl"/>
+                            <constraint firstItem="5UM-QY-l5I" firstAttribute="top" secondItem="0jp-bP-m9Q" secondAttribute="top" type="default" id="xfE-OE-gHe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ampmLabel" destination="0jp-bP-m9Q" id="Nyi-k8-d9l"/>
                         <outlet property="clockLabel" destination="Qba-iT-04o" id="kcg-u3-961"/>
+                        <outlet property="clockLabelBack" destination="9bj-Jk-Oh2" id="8l6-ct-R0v"/>
                         <outlet property="dateLabel" destination="5UM-QY-l5I" id="tbt-fC-s0P"/>
                         <outlet property="dayOfWeekLabel" destination="GQt-ow-waQ" id="clg-yF-Yqz"/>
                     </connections>
@@ -327,6 +336,117 @@
             </objects>
             <point key="canvasLocation" x="526" y="116"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="5iL-ru-k6O">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwC-ex-ACd" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Landscape" useStoryboardIdentifierAsRestorationIdentifier="YES" id="We5-04-WNd" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4w-Yb-0gt">
+                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM1-lh-qYu" userLabel="Glow Label Back" customClass="RRSGlowLabel">
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="70"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIq-6i-Fuy" userLabel="Glow Label Front" customClass="RRSGlowLabel">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="w8v-gf-hYt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="70"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-V1-9OS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="2uV-nQ-691"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="CalendarIcon.png">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlarms:" destination="We5-04-WNd" eventType="touchUpInside" id="aRe-8q-YDh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMA-eE-t3J">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="HBH-vQ-Qax"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="SettingsIcon.png">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSettings:" destination="We5-04-WNd" eventType="touchUpInside" id="bT8-KJ-eKj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="November 22 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRE-41-0gD">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="yVy-If-lIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thursday" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAx-nP-V6Y">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Rza-a2-ylQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWF-R1-DhF">
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.047058828179999998" green="0.02745098248" blue="0.11372549830000001" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="rPj-V1-9OS" firstAttribute="leading" secondItem="M4w-Yb-0gt" secondAttribute="leading" constant="20" type="user" id="A5f-rP-lEQ"/>
+                            <constraint firstItem="XM1-lh-qYu" firstAttribute="leading" secondItem="M4w-Yb-0gt" secondAttribute="leading" type="default" id="FtV-0Y-xFj"/>
+                            <constraint firstItem="tMA-eE-t3J" firstAttribute="top" secondItem="M4w-Yb-0gt" secondAttribute="top" constant="20" type="user" id="Gxf-qf-DGA"/>
+                            <constraint firstItem="XM1-lh-qYu" firstAttribute="trailing" secondItem="M4w-Yb-0gt" secondAttribute="trailing" type="default" id="OTw-1n-Dex"/>
+                            <constraint firstItem="XM1-lh-qYu" firstAttribute="baseline" secondItem="MIq-6i-Fuy" secondAttribute="baseline" type="default" id="Sme-zP-ysb"/>
+                            <constraint firstItem="gAx-nP-V6Y" firstAttribute="trailing" secondItem="HWF-R1-DhF" secondAttribute="trailing" type="default" id="UCg-UI-LCT"/>
+                            <constraint firstAttribute="bottom" secondItem="gAx-nP-V6Y" secondAttribute="bottom" constant="93" id="YeK-Vs-XAr"/>
+                            <constraint firstItem="XRE-41-0gD" firstAttribute="leading" secondItem="M4w-Yb-0gt" secondAttribute="leading" constant="148" id="Zxf-PI-QyF"/>
+                            <constraint firstAttribute="trailing" secondItem="gAx-nP-V6Y" secondAttribute="trailing" constant="155" id="brT-Vj-TTm"/>
+                            <constraint firstItem="MIq-6i-Fuy" firstAttribute="trailing" secondItem="M4w-Yb-0gt" secondAttribute="trailing" type="default" id="eCb-bn-JQg"/>
+                            <constraint firstItem="XRE-41-0gD" firstAttribute="top" secondItem="HWF-R1-DhF" secondAttribute="top" type="default" id="eSD-iO-bRg"/>
+                            <constraint firstItem="MIq-6i-Fuy" firstAttribute="leading" secondItem="M4w-Yb-0gt" secondAttribute="leading" type="default" id="hnj-l1-R6T"/>
+                            <constraint firstItem="XRE-41-0gD" firstAttribute="baseline" secondItem="HWF-R1-DhF" secondAttribute="baseline" type="default" id="jFf-Ud-kfg"/>
+                            <constraint firstItem="rPj-V1-9OS" firstAttribute="top" secondItem="M4w-Yb-0gt" secondAttribute="top" constant="20" type="user" id="jwd-Rd-sNm"/>
+                            <constraint firstItem="XRE-41-0gD" firstAttribute="top" secondItem="XM1-lh-qYu" secondAttribute="top" type="default" id="pva-Ll-OKP"/>
+                            <constraint firstItem="XRE-41-0gD" firstAttribute="top" secondItem="MIq-6i-Fuy" secondAttribute="top" type="default" id="uUm-Z7-SQX"/>
+                            <constraint firstAttribute="trailing" secondItem="tMA-eE-t3J" secondAttribute="trailing" constant="20" type="user" id="vW2-lc-mTg"/>
+                            <constraint firstItem="XRE-41-0gD" firstAttribute="top" secondItem="M4w-Yb-0gt" secondAttribute="top" constant="94" id="yTX-qa-o6C"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="ampmLabel" destination="HWF-R1-DhF" id="ONh-15-5iO"/>
+                        <outlet property="clockLabel" destination="MIq-6i-Fuy" id="Adn-NX-9NG"/>
+                        <outlet property="clockLabelBack" destination="XM1-lh-qYu" id="iw6-Zn-0rz"/>
+                        <outlet property="dateLabel" destination="XRE-41-0gD" id="g5b-ci-boo"/>
+                        <outlet property="dayOfWeekLabel" destination="gAx-nP-V6Y" id="8Cu-CS-FCq"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-129" y="806"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CalendarIcon.png" width="32" height="32"/>
@@ -363,6 +483,7 @@
                 <relationship kind="action" name="showSettings:"/>
                 <relationship kind="outlet" name="ampmLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="clockLabel" candidateClass="RRSGlowLabel"/>
+                <relationship kind="outlet" name="clockLabelBack" candidateClass="RRSGlowLabel"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dayOfWeekLabel" candidateClass="UILabel"/>
             </relationships>
