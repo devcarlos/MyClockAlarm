@@ -29,20 +29,21 @@
 @synthesize showWeekDay = _showWeekDay;
 @synthesize show24hours = _show24hours;
 
+
 - (void)awakeFromNib
-{
-    isShowingLandscapeView = NO;
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(orientationChanged:)
-                                                 name:UIDeviceOrientationDidChangeNotification
-                                               object:nil];
+{        isShowingLandscapeView = NO;
+        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(orientationChanged:)
+                                                     name:UIDeviceOrientationDidChangeNotification
+                                                   object:nil];
 }
 
 - (void)orientationChanged:(NSNotification *)notification
 {
     UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    if (UIDeviceOrientationIsLandscape(deviceOrientation))
+    if (UIDeviceOrientationIsLandscape(deviceOrientation) &&
+        !isShowingLandscapeView)
     {
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
         UIViewController *controller = [mainStoryboard instantiateViewControllerWithIdentifier: @"Landscape"];
@@ -50,7 +51,8 @@
         isShowingLandscapeView = YES;
         NSLog(@"Landscape");
     }
-    else if (UIDeviceOrientationIsPortrait(deviceOrientation))
+    else if (UIDeviceOrientationIsPortrait(deviceOrientation) &&
+             isShowingLandscapeView)
     {
         [self dismissViewControllerAnimated:YES completion:nil];
         isShowingLandscapeView = NO;
@@ -90,6 +92,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    isShowingLandscapeView = YES;
+
+    
 	// Do any additional setup after loading the view, typically from a nib.
     /*
     // array
