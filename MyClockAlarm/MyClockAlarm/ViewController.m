@@ -174,10 +174,11 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
         //
-        [self.clockLabel setFont:[UIFont fontWithName:@"DS-Digital" size:180.0]];
-        [self.dateLabel setFont:[UIFont fontWithName:@"DS-Digital" size:24.0]];
-        [self.dayOfWeekLabel setFont:[UIFont fontWithName:@"DS-Digital" size:24.0]];
-        [self.ampmLabel setFont:[UIFont fontWithName:@"DS-Digital" size:24.0]];
+        [self.clockLabel setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:70.0]];
+        [self.clockLabelBack setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:70.0]];
+        [self.dateLabel setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:10.0]];
+        [self.dayOfWeekLabel setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:10.0]];
+        [self.ampmLabel setFont:[UIFont fontWithName:@"Advanced Pixel LCD-7" size:10.0]];
         gradientLayer.frame = CGRectMake(0.0, 0.0, 768.0, 1004.0);
         
     }else{
@@ -207,7 +208,7 @@
     self.clockLabelBack.glowOffset = CGSizeMake(0.0, 0.0);
     self.clockLabelBack.glowAmount = 35.0;
     self.clockLabelBack.text = @"00:00:00";
-    self.clockLabelBack.alpha = 0.5f;
+    self.clockLabelBack.alpha = 0.1f;
     
     //check to change only if the text has changed
     if (![self.dateLabel.text isEqualToString:currentDate]) {
@@ -226,7 +227,7 @@
     
     if (self.showDate == NO) {
         //self.dateLabel.hidden = YES;
-        self.dateLabel.alpha = 0.5f;
+        self.dateLabel.alpha = 0.2f;
     } else {
         self.dateLabel.hidden = NO;
         self.dateLabel.alpha = 1.0f;
@@ -235,7 +236,7 @@
     
     if (self.showWeekDay == NO) {
         //self.dayOfWeekLabel.hidden = YES;
-        self.dayOfWeekLabel.alpha = 0.5f;
+        self.dayOfWeekLabel.alpha = 0.2f;
     } else {
         //self.dayOfWeekLabel.hidden = NO;
         self.dayOfWeekLabel.alpha = 1.0f;
@@ -245,18 +246,12 @@
         [dateFormatter setDateFormat:@"hh:mm:ss"];
         currentTime = [dateFormatter stringFromDate: today];
         self.clockLabel.text = currentTime;
-        
-        //self.clockLabel.hidden = YES;
-        //self.ampmLabel.hidden = YES;
-        self.ampmLabel.alpha = 0.5f;
+        self.ampmLabel.alpha = 0.2f;
         
     } else {
         [dateFormatter setDateFormat:@"HH:mm:ss"];
         currentTime = [dateFormatter stringFromDate: today];
         self.clockLabel.text = currentTime;
-
-        //self.clockLabel.hidden = NO;
-        //self.ampmLabel.hidden = NO;
         self.ampmLabel.alpha = 1.0f;
 
     }
@@ -271,17 +266,31 @@
 
 - (IBAction)showSettings:(id)sender {
     
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+    UIStoryboard *mainStoryboard;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+        
+    }else{
+        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+    }
+    
     SettingsViewController *controller = [mainStoryboard instantiateViewControllerWithIdentifier: @"settings"];
-    //SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
     controller.delegate = self;
-    //[[self navigationController] pushViewController:controller animated:YES];
     [self presentViewController:controller animated:YES completion:nil];
 
 }
 
 - (IBAction)showAlarms:(id)sender {
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+    UIStoryboard *mainStoryboard;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+        
+    }else{
+        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+    }
+
     UIViewController *controller = [mainStoryboard instantiateViewControllerWithIdentifier: @"alarms"];
     [self presentViewController:controller animated:YES completion:nil];
 }

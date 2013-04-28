@@ -19,8 +19,6 @@
 		C90C8522171DCDF00072ABCE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90C8520171DCDF00072ABCE /* MainStoryboard_iPhone.storyboard */; };
 		C90C8525171DCDF00072ABCE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90C8523171DCDF00072ABCE /* MainStoryboard_iPad.storyboard */; };
 		C90C8528171DCDF00072ABCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90C8527171DCDF00072ABCE /* ViewController.m */; };
-		C90C852F171DD0790072ABCE /* Night_Clouds_Wallpaper_kryw4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C90C852E171DD0790072ABCE /* Night_Clouds_Wallpaper_kryw4.jpg */; };
-		C90C8533171DDB8E0072ABCE /* DS-DIGIB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C90C8531171DD4890072ABCE /* DS-DIGIB.TTF */; };
 		C91EA1AE1725FB5E0088AE5C /* SettingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C91EA1AC1725FB5E0088AE5C /* SettingsIcon.png */; };
 		C91EA1AF1725FB5E0088AE5C /* CalendarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C91EA1AD1725FB5E0088AE5C /* CalendarIcon.png */; };
 		C91EA1B21725FC4D0088AE5C /* CalendarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91EA1B01725FC4D0088AE5C /* CalendarIcon@2x.png */; };
@@ -33,7 +31,6 @@
 		C945B0AA1725BD16001C90D0 /* AlarmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C945B0A91725BD16001C90D0 /* AlarmsViewController.m */; };
 		C945B0B11725C57A001C90D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945B0B01725C57A001C90D0 /* QuartzCore.framework */; };
 		C945B0B41725CA55001C90D0 /* RRSGlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C945B0B31725CA55001C90D0 /* RRSGlowLabel.m */; };
-		C9595B44172965DC003B4DD9 /* Let's go Digital Regular.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C9595B42172965B2003B4DD9 /* Let's go Digital Regular.TTF */; };
 		C9595B45172965DC003B4DD9 /* advanced_pixel_lcd-7.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C9595B43172965B2003B4DD9 /* advanced_pixel_lcd-7.TTF */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +52,6 @@
 		C90C8524171DCDF00072ABCE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C90C8526171DCDF00072ABCE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C90C8527171DCDF00072ABCE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C90C852E171DD0790072ABCE /* Night_Clouds_Wallpaper_kryw4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Night_Clouds_Wallpaper_kryw4.jpg; sourceTree = "<group>"; };
-		C90C8531171DD4890072ABCE /* DS-DIGIB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGIB.TTF"; sourceTree = "<group>"; };
 		C91EA1AC1725FB5E0088AE5C /* SettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsIcon.png; sourceTree = "<group>"; };
 		C91EA1AD1725FB5E0088AE5C /* CalendarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarIcon.png; sourceTree = "<group>"; };
 		C91EA1B01725FC4D0088AE5C /* CalendarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalendarIcon@2x.png"; sourceTree = "<group>"; };
@@ -74,9 +69,7 @@
 		C945B0B01725C57A001C90D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C945B0B21725CA55001C90D0 /* RRSGlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRSGlowLabel.h; sourceTree = "<group>"; };
 		C945B0B31725CA55001C90D0 /* RRSGlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRSGlowLabel.m; sourceTree = "<group>"; };
-		C9595B42172965B2003B4DD9 /* Let's go Digital Regular.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Let's go Digital Regular.TTF"; sourceTree = "<group>"; };
 		C9595B43172965B2003B4DD9 /* advanced_pixel_lcd-7.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "advanced_pixel_lcd-7.TTF"; sourceTree = "<group>"; };
-		C9595B4617296B0C003B4DD9 /* 7LED.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7LED.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +152,6 @@
 				C91EA1AD1725FB5E0088AE5C /* CalendarIcon.png */,
 				C91EA1B11725FC4D0088AE5C /* SettingsIcon@2x.png */,
 				C91EA1AC1725FB5E0088AE5C /* SettingsIcon.png */,
-				C90C852E171DD0790072ABCE /* Night_Clouds_Wallpaper_kryw4.jpg */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -167,10 +159,7 @@
 		C90C8532171DD4910072ABCE /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C9595B42172965B2003B4DD9 /* Let's go Digital Regular.TTF */,
 				C9595B43172965B2003B4DD9 /* advanced_pixel_lcd-7.TTF */,
-				C9595B4617296B0C003B4DD9 /* 7LED.TTF */,
-				C90C8531171DD4890072ABCE /* DS-DIGIB.TTF */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -255,16 +244,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9595B44172965DC003B4DD9 /* Let's go Digital Regular.TTF in Resources */,
 				C9595B45172965DC003B4DD9 /* advanced_pixel_lcd-7.TTF in Resources */,
-				C90C8533171DDB8E0072ABCE /* DS-DIGIB.TTF in Resources */,
 				C90C8513171DCDF00072ABCE /* InfoPlist.strings in Resources */,
 				C90C851B171DCDF00072ABCE /* Default.png in Resources */,
 				C90C851D171DCDF00072ABCE /* Default@2x.png in Resources */,
 				C90C851F171DCDF00072ABCE /* Default-568h@2x.png in Resources */,
 				C90C8522171DCDF00072ABCE /* MainStoryboard_iPhone.storyboard in Resources */,
 				C90C8525171DCDF00072ABCE /* MainStoryboard_iPad.storyboard in Resources */,
-				C90C852F171DD0790072ABCE /* Night_Clouds_Wallpaper_kryw4.jpg in Resources */,
 				C91EA1AE1725FB5E0088AE5C /* SettingsIcon.png in Resources */,
 				C91EA1AF1725FB5E0088AE5C /* CalendarIcon.png in Resources */,
 				C91EA1B21725FC4D0088AE5C /* CalendarIcon@2x.png in Resources */,

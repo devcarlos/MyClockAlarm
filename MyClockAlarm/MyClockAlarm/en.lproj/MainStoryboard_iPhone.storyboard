@@ -314,7 +314,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="Version 0.8.0  Copyright Synapse Online SRL  All Rights Reserved" id="vWB-td-PYa">
+                            <tableViewSection id="vWB-td-PYa">
+                                <string key="footerTitle">Version 0.1.2  Copyright Carlos Alcala carlos.alcala@me.com 
+
+ All Rights Reserved</string>
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -339,7 +342,6 @@
         <!--View Controller-->
         <scene sceneID="5iL-ru-k6O">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UwC-ex-ACd" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Landscape" useStoryboardIdentifierAsRestorationIdentifier="YES" id="We5-04-WNd" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4w-Yb-0gt">
                         <rect key="frame" x="0.0" y="20" width="568" height="300"/>
@@ -444,6 +446,7 @@
                         <outlet property="dayOfWeekLabel" destination="gAx-nP-V6Y" id="8Cu-CS-FCq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwC-ex-ACd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-129" y="806"/>
         </scene>

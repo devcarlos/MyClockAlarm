@@ -26,10 +26,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>7LED.TTF</string>
 		<string>advanced_pixel_lcd-7.TTF</string>
-		<string>Let's go Digital Regular.TTF</string>
-		<string>DS-DIGIB.TTF</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
