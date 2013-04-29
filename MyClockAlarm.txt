@@ -1,0 +1,12 @@
+MyClockAlarm
+
+MyClockAlarm is an iOS based iPhone/iPad application that displays a digital clock alarm with a glow label effect and a digital font, with a settings and alarms table views to handle this application template is ready to customize and upload to the App Store.
+
+
+TAGS
+
+iPhone, iPad, iOS, My Clock Alarm, digital clock, alarm, glow text, custom, template
+
+MSG
+
+This is a fully customizable Clock Alarm app ready to improve make some updates and upload to the app store or just learn how to use on your own project. 
